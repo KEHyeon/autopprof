@@ -43,7 +43,7 @@ func DiscordSlackReporter(opt *DiscordReporterOption) (*DiscordReporter, error) 
 func (s *DiscordReporter) ReportCPUProfile(
 	ctx context.Context, r io.Reader, ci CPUInfo,
 ) error {
-	message := discord.NewWebhookMessageCreateBuilder().SetContent("test").SetUsername("문진진").Build()
+	message := discord.NewWebhookMessageCreateBuilder().SetContent("CPU프로파일일").SetUsername("문진진").Build()
 	_, err := s.Client.CreateMessage(message)
 	if err != nil {
 		fmt.Println("메시지 전송 실패:", err)
@@ -56,6 +56,12 @@ func (s *DiscordReporter) ReportCPUProfile(
 func (s *DiscordReporter) ReportHeapProfile(
 	ctx context.Context, r io.Reader, mi MemInfo,
 ) error {
+	message := discord.NewWebhookMessageCreateBuilder().SetContent("HEAP프로파일").SetUsername("문진진").Build()
+	_, err := s.Client.CreateMessage(message)
+	if err != nil {
+		fmt.Println("메시지 전송 실패:", err)
+		return err
+	}
 	return nil
 }
 
@@ -63,5 +69,11 @@ func (s *DiscordReporter) ReportHeapProfile(
 func (s *DiscordReporter) ReportGoroutineProfile(
 	ctx context.Context, r io.Reader, gi GoroutineInfo,
 ) error {
+	message := discord.NewWebhookMessageCreateBuilder().SetContent("고루틴프로파일").SetUsername("문진진").Build()
+	_, err := s.Client.CreateMessage(message)
+	if err != nil {
+		fmt.Println("메시지 전송 실패:", err)
+		return err
+	}
 	return nil
 }
