@@ -1,6 +1,6 @@
 # autopprof
 
-![Run tests](https://github.com/daangn/autopprof/workflows/Run%20tests/badge.svg) [![Release](https://img.shields.io/github/v/tag/daangn/autopprof?label=Release)](https://github.com/daangn/autopprof/releases)
+![Run tests](https://github.com/KEHyeon/autopprof/workflows/Run%20tests/badge.svg) [![Release](https://img.shields.io/github/v/tag/KEHyeon/autopprof?label=Release)](https://github.com/KEHyeon/autopprof/releases)
 
 Automatically profile the Go applications when CPU or memory utilization crosses specific
 threshold levels against the Linux container CPU quota and memory limit.
@@ -18,7 +18,7 @@ e.g. Slack).
 ## Installation
 
 ```bash
-go get -u github.com/daangn/autopprof
+go get -u github.com/KEHyeon/autopprof
 ```
 
 ## Usage
@@ -33,8 +33,8 @@ import (
 	"errors"
 	"log"
 
-	"github.com/daangn/autopprof"
-	"github.com/daangn/autopprof/report"
+	"github.com/KEHyeon/autopprof"
+	"github.com/KEHyeon/autopprof/report"
 )
 
 func main() {
