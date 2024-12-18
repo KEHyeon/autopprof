@@ -1,4 +1,4 @@
-module github.com/daangn/autopprof
+module github.com/KEHyeon/autopprof
 
 go 1.21
 
